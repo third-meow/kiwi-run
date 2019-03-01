@@ -40,4 +40,15 @@ public class Kiwi extends Animal {
         y = start_y;
     }
 
+    /**
+     * toString() overload
+     * prints kiwi status
+     * eg.
+     *  "Kiwi Obj; name: jeff; pos: (3,4)"
+     */
+    @Override
+    public String toString() {
+        return String.format("Kiwi Obj; name: %s; pos: (%d,%d)", name, x, y);
+    }
+
 }
