@@ -16,28 +16,28 @@ public class Kiwi extends Animal {
      * Constructor
      */
     Kiwi() {
-        x = 0;
-        y = 0;
+        this.x = 0;
+        this.y = 0;
     }
 
     /**
      * Constructor with name
-     * @param kiwiName name of kiwi
+     * @param name human readable name of kiwi
      */
-    Kiwi(String kiwiName) {
-        name = kiwiName;
+    Kiwi(String name) {
+        this(name, 0, 0);
     }
 
     /**
      * Constructor with name and starting position
-     * @param kiwiName name of kiwi
-     * @param start_x starting position on x-axis
-     * @param start_y starting position on y-axis
+     * @param name human name of kiwi
+     * @param x starting position on x-axis
+     * @param y starting position on y-axis
      */
-    Kiwi(String kiwiName, int start_x, int start_y) {
-        name = kiwiName;
-        x = start_x;
-        y = start_y;
+    Kiwi(String name, int x, int y) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
     }
 
     /**
