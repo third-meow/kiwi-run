@@ -8,7 +8,7 @@ package com.thirdmeow;
  */
 public class Animal {
     // Position
-    int x, y;
+    public int x, y;
 
     public void moveUp(int dis) {
         y += dis;
@@ -23,6 +23,4 @@ public class Animal {
     public void moveRight(int dis) {
         x += dis;
     }
-
-
 }
