@@ -18,7 +18,7 @@ public class Universe {
      */
     Universe() {
         mainPlayer = new Kiwi();
-        firstWorm = new Worm(5,5, MAX_X, MAX_Y);
+        firstWorm = new Worm(5,5, MAX_X-1, MAX_Y-1);
     }
 
     public void printStatus() {
@@ -32,11 +32,11 @@ public class Universe {
             }
         }
 
-        // Change print array at kiwis position to '@'
-        printArray[mainPlayer.y][mainPlayer.x] = '@';
-
         // Change print array at worms position to '%'
         printArray[firstWorm.y][firstWorm.x] = '%';
+
+        // Change print array at kiwis position to '@'
+        printArray[mainPlayer.y][mainPlayer.x] = '@';
 
         for (int i = MAX_Y - 1; i >= 0; --i) {
             System.out.println();

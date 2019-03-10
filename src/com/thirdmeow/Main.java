@@ -14,25 +14,27 @@ public class Main {
         Universe uni = new Universe();
 
         Scanner scr = new Scanner(System.in);
-        String cmd;
+        scr.useDelimiter("");
+        char cmd;
 
         do {
             uni.printStatus();
-            cmd = scr.nextLine();
+            cmd = scr.next().charAt(0);
+
             switch (cmd) {
-                case "h":
+                case 'h':
                     if (uni.mainPlayer.x > 0)
                         uni.mainPlayer.moveLeft(1);
                     break;
-                case "j":
+                case 'j':
                     if (uni.mainPlayer.y > 0)
                         uni.mainPlayer.moveDown(1);
                     break;
-                case "k":
+                case 'k':
                     if (uni.mainPlayer.y < uni.MAX_Y)
                         uni.mainPlayer.moveUp(1);
                     break;
-                case "l":
+                case 'l':
                     if (uni.mainPlayer.x < uni.MAX_X)
                         uni.mainPlayer.moveRight(1);
                     break;
@@ -43,9 +45,10 @@ public class Main {
 
             if (uni.firstWorm.x == uni.mainPlayer.x
                 && uni.firstWorm.y == uni.mainPlayer.y) {
+                uni.printStatus();
                 uni.printWinMsg();
                 break;
             }
-        } while (!cmd.equals("q"));
+        } while (cmd != 'q');
     }
 }
